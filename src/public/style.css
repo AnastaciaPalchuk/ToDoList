@@ -1,0 +1,187 @@
+body{
+    margin: 0;
+    height: 100vh;
+}
+
+div.Wrapper{
+    display: flex;
+    background-color: #e8e4e4;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+div.SignInForm{
+    display: flex;
+    background-color: white;
+    width: 30%;
+    height: 55vh;
+    border-radius: 15px;
+}
+
+div.RegisterForm{
+display: flex;
+background-color: white;
+width: 40%;
+height: 80vh;
+border-radius: 15px;
+}
+
+.Form{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    padding: 10px 20px 10px 20px;
+}
+
+#image{
+    display: flex;
+width: 200px;
+}
+.imageWrap{
+    display: flex;
+    justify-content: center;
+}
+h3{
+    padding: 5px 10px 5px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size:large;
+}
+.but{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90px;
+    height: 40px;
+    font-size: medium;
+    margin: 5px 10px 5px 10px ;
+    background-color: #e8e4e4;
+    color: #000000;
+    border: #e8e4e4;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.but:hover{
+    color: #ff5722;
+    box-shadow: 0 0 8px rgba(255, 87, 34, 0.6);
+
+}
+.lable{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 10px 10px;
+}
+
+.FormFillIn{
+    border-top: 1px solid #e8e4e4 ;
+}
+
+ input {
+    padding: 10px;
+    font-size: 13px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #ff5722;
+    box-shadow: 0 0 8px rgba(255, 87, 34, 0.6);
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin: 50px;
+}
+
+.buttons {
+    display: flex;
+    height: 70%;
+    width: 120vh;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.tasks {
+    display: flex;
+    background-color: rgb(223, 236, 240);
+    height: 70%;
+    width: 120vh;
+    margin: 10px 50px 50px 50px;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.task {
+    display: flex;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-info {
+    display: flex;
+    justify-content: center;
+
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+img{
+    display: flex;
+    width: 20px;
+    margin: 7px;
+}
+
+button{
+    display: flex;
+    width: 100px;
+    height: 50px;
+    font-size: medium;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(223, 236, 240);
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover{
+    color: rgb(6, 100, 129);
+    box-shadow: 0 0 8px  rgb(40, 127, 153);
+
+}
+
+.checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;;
+}
+
+.name{
+    display: flex;
+    margin-bottom: 3px;
+}
+

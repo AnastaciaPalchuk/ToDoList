@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>ToDoList</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="head">
+            <h1>ToDo List</h1>
+            <div class="buttons">
+                <button class="button">Add Task</button>
+                <input type="text" class="taskName">
+                <select name="All" id="1">
+                    <option value="All">All</option>
+                    <option value="This week">This week</option>
+                    <option value="This month">This month</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="tasks"></div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const but = document.querySelector('.button');
+    but.addEventListener('click', () => {
+        const task = document.querySelector('.taskName');
+        // Create the main container div with class 'task'
+        const taskDiv = document.createElement('div');
+        taskDiv.className = 'task';
+
+        // Create the 'task-info' div
+        const taskInfoDiv = document.createElement('div');
+        taskInfoDiv.className = 'task-info';
+
+        // Create the 'checkbox' div and input checkbox
+        const checkboxDiv = document.createElement('div');
+        checkboxDiv.className = 'checkbox';
+
+        const checkboxInput = document.createElement('input');
+        checkboxInput.type = 'checkbox';
+
+        // Append checkbox to checkbox div
+        checkboxDiv.appendChild(checkboxInput);
+
+        // Create the 'details' div
+        const detailsDiv = document.createElement('div');
+        detailsDiv.className = 'details';
+
+        // Create the 'name' div
+        const nameDiv = document.createElement('div');
+        nameDiv.className = 'name';
+        nameDiv.textContent = `${task.value}`;
+
+        // Create the 'date' div
+        const dateDiv = document.createElement('div');
+        dateDiv.className = 'date';
+        dateDiv.textContent = new Date().toISOString();
+
+        // Append name and date to details div
+        detailsDiv.appendChild(nameDiv);
+        detailsDiv.appendChild(dateDiv);
+
+        // Append checkboxDiv and detailsDiv to taskInfoDiv
+        taskInfoDiv.appendChild(checkboxDiv);
+        taskInfoDiv.appendChild(detailsDiv);
+
+        // Create the 'options' div
+        const optionsDiv = document.createElement('div');
+        optionsDiv.className = 'options';
+
+        // Create the first imageWrap div and img for delete icon
+        const deleteWrap = document.createElement('div');
+        deleteWrap.className = 'imageWrap';
+
+        const deleteImg = document.createElement('img');
+        deleteImg.src = './icons8-bin-50.png';
+        deleteImg.alt = 'delete';
+
+        // Append img to deleteWrap
+        deleteWrap.appendChild(deleteImg);
+
+        // Create the second imageWrap div and img for edit icon
+        const editWrap = document.createElement('div');
+        editWrap.className = 'imageWrap';
+
+        const editImg = document.createElement('img');
+        editImg.src = './icons8-edit-50.png';
+        editImg.alt = 'edit';
+
+        // Append img to editWrap
+        editWrap.appendChild(editImg);
+
+        // Append deleteWrap and editWrap to optionsDiv
+        optionsDiv.appendChild(deleteWrap);
+        optionsDiv.appendChild(editWrap);
+
+        // Append taskInfoDiv and optionsDiv to taskDiv
+        taskDiv.appendChild(taskInfoDiv);
+        taskDiv.appendChild(optionsDiv);
+
+        // Now, append taskDiv to the desired container in the DOM
+        document.querySelector(".tasks").appendChild(taskDiv);
+    })
+
+</script>
+
+</html>
